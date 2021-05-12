@@ -14,15 +14,15 @@ html, body{
 #nav {
     border-bottom: 1px solid black;
     background-color: $colorNav;
+    font-size: 20px;
     height: 70px;
     line-height: 70px;
 }
-  
-
 #menu a{
     text-decoration: none;
     color: $colorNavText;
     line-height: 70px;
+    margin: 0 10px;
 }
   
   #menu a:hover {
@@ -37,13 +37,16 @@ html, body{
     font-size: 30px;
     display: none;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     #nav a:not(:first-child) {
-        float: right;
-        width: 100%;
-        background-color: gray;
-        text-align: center;
-        display: none ;
+      float: right;
+      width: 100%;
+      background-color: gray;
+      text-align: center;
+      display: none;
+    }
+    #nav a:first-child{
+      margin: 10px;
     }
     #burger {
       float: right;
