@@ -1,11 +1,53 @@
-$bgColor: green;
-$txtColor: white;
+$colorNav: grey;
+$colorNavText: white;
+$colorNavHover: white;
+$colorNavHoverText: black;
+$colorNavActive: green;
+$colorNavTextActive: white;
 
-body {
-    color: $txtColor;
-    background-color: $bgColor;
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Helvetica;
 }
+#nav {
+    border-bottom: 1px solid black;
+    background-color: $colorNav;
+    height: 70px;
+    line-height: 70px;
+}
+  
 
-.oke{
-    color: black;
+#menu a{
+    text-decoration: none;
+    color: $colorNavText;
+    line-height: 70px;
 }
+  
+  #menu a:hover {
+    color: $colorNavHoverText;
+  }
+  
+  #menu a.active {
+    color: $colorNavTextActive;
+  }
+  
+  #burger{
+    font-size: 30px;
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    #nav a:not(:first-child) {
+        float: right;
+        width: 100%;
+        background-color: gray;
+        text-align: center;
+        display: none ;
+    }
+    #burger {
+      float: right;
+      display: block;
+    }
+}
+  
